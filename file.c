@@ -36,7 +36,7 @@ void get_file(const char *filedesignate)
 		{
 			arg[number] = strpart;
 			strpart = strtok(NULL, "\t\n");
-			number++
+			number++;
 		}
 		arg[number] = NULL;
 		if (number == 0)

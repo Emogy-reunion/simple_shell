@@ -1,12 +1,12 @@
 #include "shell.h"
 
 /**
- * builtin - function to handle builtins
+ * handle_builtin - function to handle builtins
  * @arguments: an array taht points to a string
  * Return : nothing
  */
 
-void builtin(char *arguments[])
+void handle_builtin(char *arguments[])
 {
 	if (my_strcmp(arguments[0], "exit") == 0)
 		custom_exit_handling(arguments);
@@ -20,3 +20,4 @@ void builtin(char *arguments[])
 		custom_setenv_handling(arguments);
 	else
 		search_run_directive(arguments);
+}

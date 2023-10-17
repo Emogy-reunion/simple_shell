@@ -23,6 +23,7 @@ size_t custom_string_length(const char *string);
 int my_strcmp(const char *word1, const char *word2);
 void my_strcpy(char *location, const char *origin);
 int custom_atoi(const char *string);
+void separate_and_builtin(int number_arguments, char *arguments[]);
 size_t reject_chars(const char *string, const char *reject);
 void custom_env_handling(void);
 void custom_cd_handling(char **arguments);

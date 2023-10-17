@@ -13,16 +13,16 @@ void get_file(const char *filedesignate)
 	char *substitute = NULL;
 	char *strpart = NULL;
 	int number;
-	FILE *file;
+	int fd;
 	char *arg[MAXIMUM_ARGUMENTS + 1];
 
-	file = fopen(filedesignate, "r");
-	if (file == NULL)
+	fd = open(filedesignate, O_RDONLY);
+	if (fd == -1)
 	{
 		perror("failed to open and read the file");
 		exit(EXIT_FAILURE);
 	}
-	while (getline(&line, &length, file) != -1)
+	while (custom_getline(&line, &length, fd) != -1)
 	{
 		line[reject_chars(line, "\n")] = '\0';
 		if (line[0] == '#')
@@ -46,5 +46,5 @@ void get_file(const char *filedesignate)
 		handle_builtin(arg);
 		free(substitute);
 	}
-	fclose(file);
+	close(fd);
 }

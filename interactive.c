@@ -21,7 +21,7 @@ void interactive_mode(void)
 			write(STDOUT_FILENO, "SHELL$ ", 7);
 			fflush(stdout);
 		}
-		if (getline(&entry, &length, stdin) == -1)
+		if (custom_getline(&entry, &length, 0) == -1)
 			break;
 		if (entry[0] == '#')
 			continue;

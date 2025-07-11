@@ -31,5 +31,5 @@ Implement the alias builtin command
 Handle variables replacement
 15. Comments
 Handle comments (#)
-16. File as input
+16. Files as input
 Usage: simple _ shell [filename]

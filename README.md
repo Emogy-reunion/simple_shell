@@ -32,4 +32,4 @@ Handle variables replacement
 15. Comments
 Handle comments (#)
 16. Files as input
-Usage: simple _ shell [filename]
+Usage: simple _ shell the [filename]

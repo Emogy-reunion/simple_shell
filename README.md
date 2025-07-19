@@ -22,7 +22,7 @@ Implement the setenv and unsetenv builtin commands
 10. cd
 Implement the builtin command cd
 11. ;
-Handle the commands separator ;
+Handled the commands separator ;
 12. && and ||
 Handle the && and || shell logical operators
 13. alias
